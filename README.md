@@ -2,18 +2,29 @@
 
 ## Overview
 
-This project analyzes the performance of a multi-asset portfolio compared to a benchmark (IWDA ETF), with a focus on **risk-adjusted returns**, **drawdowns**, and **portfolio optimization techniques**.
+This project analyzes the performance of a multi-asset portfolio compared to a benchmark (IWDA ETF), with a focus on **risk-adjusted returns**, **drawdowns**, and **portfolio optimization techniques**. 
+
+The reason I built this is to understand why my portfolio was underperforming a simple global ETF (IWDA) and whether optimization techniques could improve it.
 
 The analysis includes:
 
-* Rolling Sharpe ratio evaluation (252-day window)
+* Rolling Sharpe (252-day)
 * Benchmark comparison
 * Risk decomposition
-* Portfolio optimization (Risk Parity & Max Sharpe)
+* Portfolio optimization (Risk Parity, Max Sharpe)
+* Yearly rebalancing
+
+The goal is to answer three questions:
+
+* Am I being compensated for the risk I'm taking?
+* Can simple optimization techniques improve performance?
+* Where is my risk actually coming from?
 
 ---
 
 ## Methodology
+
+Data covers 5 years (2020-2025) using daily prices (source: ETF providers)
 
 ### Key Metrics
 
@@ -22,11 +33,11 @@ The analysis includes:
 * **Volatility**
 * **Sharpe Ratio**
 * **Rolling Sharpe Ratio (252-day)**
-* **Maximum Drawdown**
+* **Max Drawdown**
 
 ### Portfolio Strategies
 
-1. **Original Portfolio** — baseline allocation
+1. **Original Portfolio** — baseline allocation, equal weighted
 2. **Risk Parity Portfolio** — equal risk contribution across assets
 3. **Max Sharpe Portfolio** — optimized for maximum risk-adjusted return
 4. **Benchmark (IWDA ETF)** — global equity benchmark
@@ -37,21 +48,21 @@ The analysis includes:
 
 ### Original Portfolio vs Benchmark
 
-* Lower return and Sharpe ratio than benchmark
+* Lower return and Sharpe ratio vs benchmark
 * **Better downside protection** (lower drawdown)
-* Risk is **highly concentrated**
+* Risk is **highly concentrated** which limits diversification benefits and helps explain the weak Sharpe
 
 ### Risk Parity Portfolio
 
 * Reduced volatility and drawdowns
-* **Underperforms in returns and Sharpe**
-* Improves diversification but still not competitive
+* **Lower absolute returns and Sharpe**
+* Improves diversification, but remains exposed to a few dominant risk drivers
 
 ### Max Sharpe Portfolio
 
-* Improved return vs original portfolio
+* Higher return vs original portfolio
 * Similar Sharpe to original
-* **Higher drawdowns** → more aggressive risk profile
+* **Higher drawdowns**, too aggressive for small improvement
 
 ---
 
@@ -89,16 +100,25 @@ The analysis includes:
 ## Key Insights
 
 * The benchmark significantly outperforms all portfolio strategies on a **risk-adjusted basis**
-* The original portfolio offers **better downside protection**, but at the cost of returns
-* Risk Parity improves stability but sacrifices performance
+* The original portfolio offers **better downside protection**, but at the cost of lower returns
+* Risk Parity reduces volatility, but the drop in returns is too large to justify it in this case
 * Max Sharpe optimization increases returns but introduces **higher drawdown risk**
 * All portfolios exhibit **risk concentration**, indicating potential for further diversification
 
 ---
 
+## What I Learned
+
+* Beating a global ETF like IWDA is harder than expected
+* Optimization alone does not guarantee better outcomes
+* Lower drawdowns usually come at a meaningful cost in returns
+* My portfolio needs better diversification, not just reweighting
+
+---
+
 ## Future Improvements
 
-* Add **transaction costs and rebalancing frequency**
+* Add **transaction costs**
 * Include **additional asset classes** (commodities, bonds, alternatives)
 * Implement **robust optimization techniques** (e.g. shrinkage, Black-Litterman)
 * Perform **out-of-sample testing**
@@ -119,7 +139,8 @@ The analysis includes:
 ```bash
 git clone https://github.com/FedericoGaravaglia/portfolio-analytics-python.git
 cd portfolio-analytics-python
-pip install pandas numpy matplotlib scipy```
+pip install pandas numpy matplotlib scipy
+```
 
 Run the notebook:
 
@@ -131,4 +152,4 @@ jupyter notebook notebook/analysis.ipynb
 
 ## Contact
 
-Feel free to reach out or connect if you'd like to discuss portfolio construction, quantitative finance, or this project.
+Feel free to reach out if you have some feedback or if you'd like to discuss this project, or portfolio construction and quantitative finance more broadly.
