@@ -24,7 +24,11 @@ The goal is to answer three questions:
 
 ## Methodology
 
-Data covers 5 years (2020-2025) using daily prices (source: ETF providers)
+Data covers 5 years (2020-2025) using daily prices (source: ETF providers).
+
+Results are based on gross returns and do not include transaction costs or slippage.
+
+Portfolios are rebalanced annually back to target/optimal weights.
 
 ### Key Metrics
 
@@ -41,6 +45,8 @@ Data covers 5 years (2020-2025) using daily prices (source: ETF providers)
 2. **Risk Parity Portfolio** — equal risk contribution across assets
 3. **Max Sharpe Portfolio** — optimized for maximum risk-adjusted return
 4. **Benchmark (IWDA ETF)** — global equity benchmark
+
+The analysis is based on a relatively short time period (2020–2025), which may influence results due to specific market conditions.
 
 ---
 
