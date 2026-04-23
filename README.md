@@ -44,6 +44,34 @@ Data covers 5 years (2020-2025) using daily prices (source: ETF providers)
 
 ---
 
+### Portfolio Allocation
+
+The original portfolio is built using a set of ETFs covering equities, bonds, real estate, and cash:
+
+**Equities**
+
+IWDA — MSCI World (IE00B4L5Y983)
+IMAE — MSCI Europe (IE00B4K48X80)
+IUSN — MSCI Small Cap (IE00BF4RFH31)
+SPYW — Europe High Dividend (IE00B5M1WJ87)
+SPYM — MSCI Emerging Markets (IE00B469F816)
+
+**Real Assets**
+
+SPY2 — Global REITs (IE00BH4GR342)
+
+**Fixed Income**
+
+VECA — Corporate Bonds (IE00BGYWT403)
+VGEA — Government Bonds (IE00BH04GL39)
+VAGF — Global Aggregate Bonds (IE00BG47KH54)
+
+**Cash**
+
+XEON — EUR Money Market (LU0290358497)
+
+The allocation aims to be diversified across regions and asset classes. However, in practice, multiple equity exposures (global, Europe, small cap, dividend, emerging markets) introduce overlap, which leads to a concentration of risk in equity markets (classic retail diversification trap, as shown below).
+
 ## Results Summary
 
 ### Original Portfolio vs Benchmark
@@ -113,6 +141,19 @@ Data covers 5 years (2020-2025) using daily prices (source: ETF providers)
 * Optimization alone does not guarantee better outcomes
 * Lower drawdowns usually come at a meaningful cost in returns
 * My portfolio needs better diversification, not just reweighting
+
+---
+
+## What I Would Do Differently
+
+Based on this analysis:
+
+* I would not try to beat the benchmark with simple optimization alone
+* I would reduce concentration by adding assets with genuinely different risk drivers
+* I would consider using the benchmark (IWDA) as a core holding, rather than a competitor
+* I would focus more on diversification across asset classes than on fine-tuning weights
+
+Overall, the results suggest that improving the structure of the portfolio matters more than optimizing it.
 
 ---
 
