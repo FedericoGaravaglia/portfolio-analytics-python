@@ -16,9 +16,9 @@ The analysis includes:
 
 The goal is to answer three questions:
 
-* Am I being compensated for the risk I'm taking?
-* Can simple optimization techniques improve performance?
-* Where is my risk actually coming from?
+* *Am I being compensated for the risk I'm taking?*
+* *Can simple optimization techniques improve performance?*
+* *Where is my risk actually coming from?*
 
 ---
 
@@ -50,25 +50,25 @@ The original portfolio is built using a set of ETFs covering equities, bonds, re
 
 **Equities**
 
-IWDA — MSCI World (IE00B4L5Y983)
-IMAE — MSCI Europe (IE00B4K48X80)
-IUSN — MSCI Small Cap (IE00BF4RFH31)
-SPYW — Europe High Dividend (IE00B5M1WJ87)
-SPYM — MSCI Emerging Markets (IE00B469F816)
+* IWDA — MSCI World (IE00B4L5Y983)
+* IMAE — MSCI Europe (IE00B4K48X80)
+* IUSN — MSCI Small Cap (IE00BF4RFH31)
+* SPYW — Europe High Dividend (IE00B5M1WJ87)
+* SPYM — MSCI Emerging Markets (IE00B469F816)
 
 **Real Assets**
 
-SPY2 — Global REITs (IE00BH4GR342)
+* SPY2 — Global REITs (IE00BH4GR342)
 
 **Fixed Income**
 
-VECA — Corporate Bonds (IE00BGYWT403)
-VGEA — Government Bonds (IE00BH04GL39)
-VAGF — Global Aggregate Bonds (IE00BG47KH54)
+* VECA — Corporate Bonds (IE00BGYWT403)
+* VGEA — Government Bonds (IE00BH04GL39)
+* VAGF — Global Aggregate Bonds (IE00BG47KH54)
 
 **Cash**
 
-XEON — EUR Money Market (LU0290358497)
+* XEON — EUR Money Market (LU0290358497)
 
 The allocation aims to be diversified across regions and asset classes. However, in practice, multiple equity exposures (global, Europe, small cap, dividend, emerging markets) introduce overlap, which leads to a concentration of risk in equity markets (classic retail diversification trap, as shown below).
 
